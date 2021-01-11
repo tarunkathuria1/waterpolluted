@@ -38,3 +38,25 @@ Engine.update(engine);
 garbage.display();
   drawSprites();
 }
+function mouseDragged(){
+  Matter.Body.setPosition(garbage.body, {x: mouseX , y: mouseY});
+}
+
+
+function mouseReleased(){
+  slingshot.fly();
+}
+function keyPressed(){
+  if (keyCode===32){
+      slingshot.attach(garbage.body);
+  }
+  if (keyCode === UP_ARROW){
+		Matter.Body.applyForce(garbage.body,garbage.body.position,{x:-300,y:-300});
+  console.log(garbage.body.position)
+  var bg="ganaga.jpg";
+  backGroundImage=loadImage(bg);
+  gameState="waterpolluted"
+  
+ 
+  }
+}
