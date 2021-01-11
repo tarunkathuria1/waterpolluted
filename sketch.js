@@ -23,12 +23,18 @@ function setup() {
  
   person=new Person(1000,500);
  
+ garbage=new Garbage(1000,500,50,50); 
  
+
+ //slingshot = new Slingshot(garbage.body,{x:person.body.position.x, y:person.body.position.y});
+
 }
 
 function draw() {
     background(backGroundImage);  
 Engine.update(engine);
-
-person.display();
+ person.display();
+//slingshot.display();
+garbage.display();
+  drawSprites();
 }
